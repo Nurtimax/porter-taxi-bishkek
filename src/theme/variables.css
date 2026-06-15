@@ -1,2 +1,17 @@
 /* For information on how to create your own theme, please refer to:
 http://ionicframework.com/docs/theming/ */
+
+.swiper-pagination-bullet-active {
+  color: #fff !important;
+  background: #007aff !important;
+}
+
+.swiper-pagination-bullet {
+  width: 15px !important;
+  height: 15px !important;
+  text-align: center;
+  line-height: 15px;
+  font-size: 8px;
+  opacity: 1 !important;
+  /* background: rgba(0, 0, 0, 0.2) !important; */
+}
