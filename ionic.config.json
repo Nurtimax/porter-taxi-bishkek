@@ -1,0 +1,7 @@
+{
+  "name": "porter-taxi-bishkek",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
