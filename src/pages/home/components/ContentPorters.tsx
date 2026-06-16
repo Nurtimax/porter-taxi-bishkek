@@ -26,10 +26,11 @@ const ContentPorters = () => {
         "IMG_2909.JPG",
         "IMG_2910.JPG",
       ],
-      title: "Card Title",
-      subTitle: "Card Subtitle",
+      title: "Азамат",
+      subTitle: "Портер",
       description:
-        "Here's a small text description for the card content. Nothing more, nothing less.",
+        "Жүк ташуу жана көчүрүү кызматы. Базардан сатып алуулар, мебель, техника, курулуш материалдары, мусор ташуу. Арзан, тез, ишенимдүү. 24/7 иштейбиз. 0550 915 053",
+      phoneNumber: "996550915053",
     },
     {
       id: 2,
@@ -41,10 +42,11 @@ const ContentPorters = () => {
         "IMG_2909.JPG",
         "IMG_2910.JPG",
       ],
-      title: "Card Title",
-      subTitle: "Card Subtitle",
+      title: "Азамат",
+      subTitle: "Портер",
       description:
-        "Here's a small text description for the card content. Nothing more, nothing less.",
+        "Жүк ташуу жана көчүрүү кызматы. Базардан сатып алуулар, мебель, техника, курулуш материалдары, мусор ташуу. Арзан, тез, ишенимдүү. 24/7 иштейбиз. 0550 915 053",
+      phoneNumber: "996550915053",
     },
   ];
 
@@ -52,7 +54,7 @@ const ContentPorters = () => {
     <IonGrid className={classes.porters}>
       <IonRow>
         {cards.map((card) => (
-          <IonCol size="12" sizeMd="6" sizeLg="4" sizeXl="2">
+          <IonCol size="12" sizeMd="6" sizeLg="4" sizeXl="2" key={card.id}>
             <IonCard className="ion-no-margin">
               <ContentImageList images={card.images} />
               <IonCardHeader>
@@ -62,10 +64,14 @@ const ContentPorters = () => {
 
               <IonCardContent>{card.description}</IonCardContent>
 
-              <IonButton expand="block">
+              <IonButton expand="block" href={`tel:+${card.phoneNumber}`}>
                 <IonIcon icon={call} /> Позвонить
               </IonButton>
-              <IonButton expand="block" color="success">
+              <IonButton
+                expand="block"
+                color="success"
+                href={`https://wa.me/${card.phoneNumber}`}
+              >
                 <IonIcon icon={logoWhatsapp} />
                 Whatsapp
               </IonButton>

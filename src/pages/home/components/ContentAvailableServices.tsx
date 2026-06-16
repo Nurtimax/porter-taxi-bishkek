@@ -7,49 +7,85 @@ import {
   IonText,
 } from "@ionic/react";
 import classes from "../index.module.css";
-// Керектүү иконкаларды импорттоо
 import {
-  carOutline,
-  earthOutline,
-  trashOutline,
-  cashOutline,
+  homeOutline,
+  busOutline,
+  trashBinOutline,
+  hammerOutline,
+  cubeOutline,
+  peopleOutline,
 } from "ionicons/icons";
+import { formatPrice } from "../../../utils/helpers/price.helper";
 
 const ContentAvailableServices = () => {
-  // Керектүү маалыматтар базасы (Services Data)
   const services = [
     {
       id: 1,
-      title: "По городу",
-      price: "900 сом",
-      icon: carOutline,
-      badge: "Фиксированный тариф",
+      title: "🏠 Үйдөн үйгө көчүрүү",
+      price: 1500,
+      icon: homeOutline,
+      badge: "Толук көчүрүү",
       addons: [
-        { name: "Грузчики", price: "+250 сом" },
-        { name: "Без лифта", price: "+100 сом/этаж" },
-        { name: "Ночной тариф", price: "+300 сом" },
+        { name: "Грузчиктер", price: "+250 сом" },
+        { name: "Лифт жок", price: "+100 сом/кабат" },
+        { name: "Түнкү тариф", price: "+300 сом" },
       ],
     },
     {
       id: 2,
-      title: "Междугородка",
-      price: "Договорная",
-      icon: earthOutline,
-      badge: "Свяжитесь с водителем",
+      title: "🏬 Базар/Дүкөн",
+      price: 800,
+      icon: busOutline,
+      badge: "Сатып алууларды жеткирүү",
       addons: [
-        { name: "Грузчики", price: "+250 сом" },
-        { name: "Ночной тариф", price: "+300 сом" },
+        { name: "Грузчиктер", price: "+250 сом" },
+        { name: "Лифт жок", price: "+100 сом/кабат" },
+        { name: "Түнкү тариф", price: "+300 сом" },
       ],
     },
     {
       id: 3,
-      title: "Вывоз мусора",
-      price: "1500 сом",
-      icon: trashOutline,
-      badge: "Вывоз крупногабаритного",
+      title: "🗑️ Мусор ташуу",
+      price: 1000,
+      icon: trashBinOutline,
+      badge: "Эски буюмдарды чыгаруу",
       addons: [
-        { name: "Грузчики", price: "+250 сом" },
-        { name: "Без лифта", price: "+100 сом/этаж" },
+        { name: "Грузчиктер", price: "+250 сом" },
+        { name: "Лифт жок", price: "+100 сом/кабат" },
+      ],
+    },
+    {
+      id: 4,
+      title: "🔨 Курулуш материалдары",
+      price: 1200,
+      icon: hammerOutline,
+      badge: "Кирпич, цемент, блок",
+      addons: [
+        { name: "Грузчиктер", price: "+250 сом" },
+        { name: "Лифт жок", price: "+100 сом/кабат" },
+      ],
+    },
+    {
+      id: 5,
+      title: "📦 Кум, шагыл, таш, топурак",
+      price: "Договорная",
+      icon: cubeOutline,
+      badge: "Көлөмдүү жүктөр",
+      addons: [
+        { name: "Грузчиктер", price: "+250 сом" },
+        { name: "Лифт жок", price: "+100 сом/кабат" },
+      ],
+    },
+    {
+      id: 6,
+      title: "🤝 Портер кызматы",
+      price: 500,
+      icon: peopleOutline,
+      badge: "Кол менен жүк ташуу",
+      addons: [
+        { name: "Грузчиктер", price: "+250 сом" },
+        { name: "Лифт жок", price: "+100 сом/кабат" },
+        { name: "Түнкү тариф", price: "+300 сом" },
       ],
     },
   ];
@@ -57,7 +93,7 @@ const ContentAvailableServices = () => {
   return (
     <div className={classes.servicesContainer}>
       <IonText color="light">
-        <h2 className={classes.sectionTitle}>Доступных услугах</h2>
+        <h2 className={classes.sectionTitle}>Биздин кызматтар</h2>
       </IonText>
 
       <div className={classes.servicesContent}>
@@ -71,10 +107,13 @@ const ContentAvailableServices = () => {
 
             <IonCardContent className={classes.cardContent}>
               <h3 className={classes.serviceTitle}>{service.title}</h3>
-              <h2 className={classes.servicePrice}>{service.price}</h2>
+              <h2 className={classes.servicePrice}>
+                {typeof service.price === "string"
+                  ? service.price
+                  : formatPrice(service.price)}
+              </h2>
               <span className={classes.serviceBadge}>{service.badge}</span>
 
-              {/* Кошумча кызматтар (Add-ons) бөлүмү */}
               <div className={classes.addonsSection}>
                 {service.addons.map((addon, index) => (
                   <div key={index} className={classes.addonRow}>
