@@ -5,7 +5,10 @@ import {
   IonCardHeader,
   IonCardSubtitle,
   IonCardTitle,
+  IonCol,
+  IonGrid,
   IonIcon,
+  IonRow,
 } from "@ionic/react";
 import classes from "../index.module.css";
 import ContentImageList from "./ImageList";
@@ -46,27 +49,31 @@ const ContentPorters = () => {
   ];
 
   return (
-    <div className={classes.porters}>
-      {cards.map((card) => (
-        <IonCard>
-          <ContentImageList images={card.images} />
-          <IonCardHeader>
-            <IonCardTitle>{card.title}</IonCardTitle>
-            <IonCardSubtitle>{card.subTitle}</IonCardSubtitle>
-          </IonCardHeader>
+    <IonGrid className={classes.porters}>
+      <IonRow>
+        {cards.map((card) => (
+          <IonCol size="12" sizeMd="6" sizeLg="4" sizeXl="2">
+            <IonCard className="ion-no-margin">
+              <ContentImageList images={card.images} />
+              <IonCardHeader>
+                <IonCardTitle>{card.title}</IonCardTitle>
+                <IonCardSubtitle>{card.subTitle}</IonCardSubtitle>
+              </IonCardHeader>
 
-          <IonCardContent>{card.description}</IonCardContent>
+              <IonCardContent>{card.description}</IonCardContent>
 
-          <IonButton expand="block">
-            <IonIcon icon={call} /> Позвонить
-          </IonButton>
-          <IonButton expand="block" color="success">
-            <IonIcon icon={logoWhatsapp} />
-            Whatsapp
-          </IonButton>
-        </IonCard>
-      ))}
-    </div>
+              <IonButton expand="block">
+                <IonIcon icon={call} /> Позвонить
+              </IonButton>
+              <IonButton expand="block" color="success">
+                <IonIcon icon={logoWhatsapp} />
+                Whatsapp
+              </IonButton>
+            </IonCard>
+          </IonCol>
+        ))}
+      </IonRow>
+    </IonGrid>
   );
 };
 
