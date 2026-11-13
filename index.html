@@ -1,141 +1,115 @@
 <!doctype html>
-<html lang="en" class="ion-palette-dark">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Porter Taxi Бишкек — Жүк ташуу жана көчүрүү кызматы</title>
-
-    <base href="/" />
-
-    <meta name="color-scheme" content="light dark" />
-    <meta
-      name="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-
-    <link rel="manifest" href="/manifest.json" />
-
-    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Эвакуатор 24/7 — Бишкек, Ош и все регионы Кыргызстана · 0703 214 161</title>
     <meta
       name="description"
-      content="Портер кызматы Бишкекте. Үйдөн үйгө көчүрүү, базардан сатып алуулар, мебель, техника, курулуш материалдарын жана мусорду ташуу. Арзан, тез, ишенимдүү. 0550 915 053"
+      content="Эвакуатор по городам и по области: Бишкек, Ош, Джалал-Абад, Талас, Нарын, Иссык-Куль. Работаем 24/7. Быстро, надёжно, доступно. Звоните: 0703 214 161 или пишите в WhatsApp."
     />
     <meta
       name="keywords"
-      content="портер бишкек, жүк ташуу, көчүрүү, грузчик, porter taxi, жүк көтөрүү, базардан жеткирүү, мебель ташуу, техника ташуу, курулуш материалдары, мусор чыгаруу"
+      content="эвакуатор, эвакуатор Бишкек, эвакуатор Ош, эвакуатор Джалал-Абад, эвакуатор Талас, эвакуатор Нарын, эвакуатор Иссык-Куль, эвакуатор Кыргызстан, эвакуатор 24/7, вызвать эвакуатор, эвакуатор чакыруу, эвакуатор Бишкекте, эвакуатор кызматы"
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://porter-taxi.netlify.app/" />
 
-    <!-- ============ VIEWPORT ============ -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0f121d" />
     <meta name="format-detection" content="telephone=no" />
 
-    <!-- add to homescreen for ios -->
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="PORTER TAXI BISHKEK" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-title" content="Эвакуатор" />
 
-    <meta
-      property="og:title"
-      content="Porter Taxi Бишкек — Жүк ташуу жана көчүрүү кызматы"
+    <!-- Hero image: start downloading before the JS bundle renders it -->
+    <link
+      rel="preload"
+      as="image"
+      href="/img/tow-truck-1056.webp"
+      imagesrcset="/img/tow-truck-640.webp 640w, /img/tow-truck-1056.webp 1056w"
+      imagesizes="(min-width: 900px) 640px, 100vw"
+      type="image/webp"
+      fetchpriority="high"
     />
+
+    <!-- Open Graph / link previews (WhatsApp, Telegram, Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="Эвакуатор 24/7" />
+    <meta property="og:url" content="https://porter-taxi.netlify.app/" />
+    <meta property="og:title" content="Эвакуатор 24/7 — по городам и по области Кыргызстана" />
     <meta
       property="og:description"
-      content="Портер кызматы: базар, мебель, техника, курулуш материалдары, мусор ташуу. Үйдөн үйгө көчүрүү. Арзан жана тез. 0550 915 053"
+      content="Бишкек, Ош, Джалал-Абад, Талас, Нарын, Иссык-Куль и вся область. Быстро, надёжно, доступно. 0703 214 161"
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://porter-taxi.netlify.app/" />
-    <meta property="og:site_name" content="Porter Taxi Bishkek" />
-    <meta property="og:locale" content="ky_KG" />
+    <meta property="og:image" content="https://porter-taxi.netlify.app/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:image:alt" content="Эвакуатор по городам и по области — 0703 214 161" />
 
-    <!-- ============ TWITTER CARD ============ -->
-    <meta name="twitter:card" content="summary" />
-    <meta
-      name="twitter:title"
-      content="Porter Taxi Бишкек — Жүк ташуу жана көчүрүү"
-    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Эвакуатор 24/7 — по городам и по области Кыргызстана" />
     <meta
       name="twitter:description"
-      content="Портер кызматы: үйдөн үйгө, базар, мебель, техника, мусор. Арзан, тез. 0550 915 053"
+      content="Бишкек, Ош, Джалал-Абад, Талас, Нарын, Иссык-Куль и вся область. Звоните: 0703 214 161"
     />
+    <meta name="twitter:image" content="https://porter-taxi.netlify.app/og-image.jpg" />
 
-    <!-- ============ ИКОНКА (favicon) ============ -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
-
-    <!-- ============ STRUCTURED DATA (JSON-LD) ============ -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Porter Taxi Bishkek",
-        "image": "https://porter-taxi.netlify.app/favicon.png",
-        "description": "Портер кызматы Бишкекте. Үйдөн үйгө көчүрүү, базардан сатып алуулар, мебель, техника, курулуш материалдарын жана мусорду ташуу.",
+        "@type": "AutomotiveBusiness",
+        "name": "Эвакуатор 24/7",
+        "description": "Эвакуатор по городам и по области Кыргызстана. Работаем круглосуточно.",
         "url": "https://porter-taxi.netlify.app/",
-        "telephone": "+996550915053",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Бишкек",
-          "addressCountry": "KG"
+        "image": "https://porter-taxi.netlify.app/og-image.jpg",
+        "logo": "https://porter-taxi.netlify.app/icon-512.png",
+        "telephone": "+996703214161",
+        "areaServed": [
+          { "@type": "Country", "name": "Кыргызстан" },
+          { "@type": "City", "name": "Бишкек" },
+          { "@type": "City", "name": "Ош" },
+          { "@type": "City", "name": "Джалал-Абад" },
+          { "@type": "City", "name": "Талас" },
+          { "@type": "City", "name": "Нарын" },
+          { "@type": "AdministrativeArea", "name": "Иссык-Куль" }
+        ],
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 42.8746,
-          "longitude": 74.5698
-        },
-        "openingHours": "Mo-Su 00:00-23:59",
-        "priceRange": "$$",
-        "sameAs": [
-          "https://www.instagram.com/porter.taxi.kg/",
-          "https://wa.me/996550915053"
-        ]
+        "sameAs": ["https://wa.me/996703214161"]
       }
     </script>
+
+    <!-- Critical style: dark page from the first paint, no white flash -->
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #0f121d;
+        color: #fff;
+      }
+    </style>
   </head>
-  <body>
-    <div style="display: none">
-      <div class="company-name">🚚 Porter Taxi</div>
-      <a
-        class="company-link"
-        href="https://porter-taxi.netlify.app/"
-        target="_blank"
-      >
-        porter-taxi.netlify.app
-      </a>
-
-      <div class="divider"></div>
-
-      <!-- 1-заголовок -->
-      <div class="headline">📦 Оор жүктөрдү оңой ташуу</div>
-
-      <!-- 1-описание -->
-      <div class="description">
-        <strong>Портер кызматы:</strong> базардан сатып алуулар, мебель,
-        техника, курулуш материалдары, мусор (эски буюмдар), үйдөн үйгө көчүрүү
-        — <strong>баарын</strong> көтөрүп, ташып, жеткиребиз.
+  <body style="background: #0f121d">
+    <noscript>
+      <div style="padding: 24px 16px; font: 18px/1.5 system-ui, sans-serif; color: #fff">
+        <h1 style="margin: 0 0 8px; font-size: 32px">Эвакуатор 24/7</h1>
+        <p style="margin: 0 0 16px">По городам и по области Кыргызстана.</p>
+        <p style="margin: 0">
+          Звоните:
+          <a href="tel:+996703214161" style="color: #ffcc03; font-weight: 700">0703 214 161</a>
+        </p>
       </div>
-
-      <!-- Дополнительная ссылка 1 -->
-      <a class="extra-link" href="#services">📋 Кызмат баалары</a>
-
-      <!-- Дополнительная ссылка 2 -->
-      <a class="extra-link" href="#contact">📞 Байланыш жана заказ берүү</a>
-
-      <!-- Кнопка вызова -->
-      <a class="call-btn" href="tel:+996550915053"> 📞 0550 915 053 </a>
-
-      <!-- Город / Адрес -->
-      <div class="address">
-        📍 Бишкек, Кыргызстан
-        <small>шаар ичинде жана айланасы</small>
-      </div>
-
-      <div class="note">Портер-кызмат • тез • ишенимдүү • арзан</div>
-    </div>
-
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

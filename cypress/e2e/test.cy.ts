@@ -1,6 +1,8 @@
-describe('My First Test', () => {
-  it('Visits the app root url', () => {
+describe('Landing page', () => {
+  it('shows the phone number as a call link', () => {
     cy.visit('/')
-    cy.contains('ion-content', 'Tab 1 page')
+    cy.contains('h1', 'ЭВАКУАТОР')
+    cy.get('a[href="tel:+996703214161"]').should('exist')
+    cy.contains('0703 214 161')
   })
 })
