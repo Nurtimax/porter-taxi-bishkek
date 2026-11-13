@@ -19,3 +19,6 @@ if (container.hasChildNodes()) {
 } else {
   createRoot(container).render(app);
 }
+
+// Analytics only, so it is fetched as a separate chunk and never delays the page itself.
+void import('./firebase');
