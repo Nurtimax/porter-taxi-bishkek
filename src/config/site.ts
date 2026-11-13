@@ -16,6 +16,8 @@ const whatsappText = 'Здравствуйте! Нужен эвакуатор.';
 export const site = {
   service: 'Эвакуатор',
   tagline: 'По городам и по области',
+  /** One plain sentence under the headline — real text for people and search engines. */
+  lead: 'Эвакуатор в Бишкеке и по всему Кыргызстану. Работаем круглосуточно, без выходных.',
 
   phone: {
     display: phoneDisplay,

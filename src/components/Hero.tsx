@@ -11,6 +11,7 @@ export function Hero() {
           </h1>
           <span className="swoosh" aria-hidden="true" />
           <p className="hero__tagline">{site.tagline}</p>
+          <p className="hero__lead">{site.lead}</p>
         </div>
         <div className="hero__media">
           <img
@@ -20,7 +21,7 @@ export function Hero() {
             sizes="(min-width: 900px) 640px, 100vw"
             width={1056}
             height={640}
-            alt="Оранжевый эвакуатор с платформой на трассе, позади — горы"
+            alt="Эвакуатор в Бишкеке — оранжевый эвакуатор с платформой на трассе, позади горы"
             fetchPriority="high"
           />
         </div>

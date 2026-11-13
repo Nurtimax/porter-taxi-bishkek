@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://evacuatr-312-bishkek.kg/sitemap.xml

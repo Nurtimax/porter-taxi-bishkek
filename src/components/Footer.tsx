@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="footer">
       <div className="container">
         <p>
-          © {new Date().getFullYear()} {site.service} {site.hours} ·{' '}
+          {site.service} {site.hours} ·{' '}
           <a href={site.phone.href}>{site.phone.display}</a>
         </p>
       </div>

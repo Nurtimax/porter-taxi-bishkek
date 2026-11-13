@@ -223,6 +223,14 @@ a {
   letter-spacing: -0.005em;
 }
 
+.hero__lead {
+  max-width: 34ch;
+  margin-top: var(--s-3);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--c-muted);
+}
+
 .hero__media {
   /* full-bleed on phones: the image's own soft edges blend into the page */
   margin: var(--s-4) calc(-1 * var(--gutter)) 0;
